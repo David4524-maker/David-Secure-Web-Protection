@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="warning.css">
+</head>
+<body>
+  <div class="card">
+    <div class="icon">⚠️</div>
+    <h1 data-i18n="warningTitle">Sitio peligroso bloqueado</h1>
+    <p data-i18n="warningBody">David Secure Web Protection detectó que el sitio puede ser peligroso.</p>
+    <div class="target">
+      <div class="label" data-i18n="warningTarget">URL bloqueada</div>
+      <div id="targetUrl" class="url"></div>
+    </div>
+    <div class="score-row">
+      <span data-i18n="warningScore">Puntuación de riesgo</span>
+      <span id="score" class="score"></span>
+    </div>
+    <ul id="reasons" class="reasons"></ul>
+    <div class="actions">
+      <button id="backBtn" class="btn safe" data-i18n="warningBack">Volver a un lugar seguro</button>
+      <button id="continueBtn" class="btn danger" data-i18n="warningContinue">Continuar de todos modos</button>
+    </div>
+  </div>
+  <script src="analyzer.js"></script>
+  <script src="warning.js"></script>
+</body>
+</html>

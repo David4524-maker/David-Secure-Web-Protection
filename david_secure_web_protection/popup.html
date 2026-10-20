@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div class="logo">🛡️</div>
+    <h1 data-i18n="appTitle">David Secure Web Protection</h1>
+  </header>
+
+  <div class="toggle-row">
+    <span data-i18n="protectionStatus">Protección</span>
+    <label class="switch">
+      <input type="checkbox" id="enabledToggle" checked>
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="analyzer">
+    <label class="section-title" data-i18n="analyzeUrl">Analizar URL</label>
+    <div class="input-row">
+      <input type="text" id="urlInput" data-i18n-placeholder="urlPlaceholder" placeholder="https://ejemplo.com">
+      <button id="analyzeBtn" data-i18n="analyze">Analizar</button>
+    </div>
+    <div id="result" class="result hidden"></div>
+  </div>
+
+  <div class="current-url">
+    <div class="section-title" data-i18n="currentPage">Página actual</div>
+    <div id="currentUrl" class="url">—</div>
+    <div id="currentStatus" class="status-badge"></div>
+  </div>
+
+  <div class="settings">
+    <div class="section-title" data-i18n="settings">Ajustes</div>
+    <label class="opt">
+      <input type="checkbox" id="blockDangerous">
+      <span data-i18n="blockDangerous">Bloquear sitios peligrosos</span>
+    </label>
+    <label class="opt">
+      <input type="checkbox" id="warnHTTP">
+      <span data-i18n="warnHTTP">Alertar sobre HTTP inseguro</span>
+    </label>
+    <label class="opt">
+      <input type="checkbox" id="warnMalicious">
+      <span data-i18n="warnMalicious">Alertar sobre sitios sospechosos</span>
+    </label>
+  </div>
+
+  <script src="analyzer.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
